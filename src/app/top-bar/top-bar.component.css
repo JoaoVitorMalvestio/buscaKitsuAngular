@@ -1,0 +1,29 @@
+h1, h1 * {
+    font-size: 27px;
+    color: #D42026;
+    font-weight: 300;
+}
+
+h1 span:not(:first-child) {
+    margin-left: 5px;
+}
+
+h1 span:first-child {
+    font-weight: 900;
+}
+
+h1 span:last-child {
+    float: right;
+}
+
+#linha {
+    width: 54px;
+    height: 34px;
+    border-top: 4px solid #D42026;
+}
+
+@media only screen and (max-width: 910px){
+    h1 span:last-child {
+        display: none;
+    }
+}

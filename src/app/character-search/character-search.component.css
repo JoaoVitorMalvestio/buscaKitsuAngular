@@ -1,0 +1,12 @@
+h4 label {
+    color: #D42026;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#search-box {
+    margin-bottom: 34px;
+    height: 31px;
+    width: 400px;
+}
