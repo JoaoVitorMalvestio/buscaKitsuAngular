@@ -2,7 +2,7 @@
   <tr><th>Personagem</th><th>Descrição</th></tr>
   <tr *ngFor="let character of charactersList">
     <td>
-      <img src='{{character.attributes.image ? character.attributes.image.original : "https://alumni.crg.eu/sites/default/files/default_images/default-picture_0_0.png"}}'>
+      <app-character-image [character]='character'></app-character-image>      
       <p>{{character.attributes.name}}</p>
     </td>
     <td>{{character.attributes.description | slice: 0: 250 }}</td>

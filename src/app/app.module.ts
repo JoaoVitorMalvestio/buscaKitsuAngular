@@ -10,6 +10,7 @@ import { CharacterDetailsComponent } from './character-details/character-details
 import { CharacterListPaginationComponent } from './character-list-pagination/character-list-pagination.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MiddleBlockComponent } from './middle-block/middle-block.component';
+import { CharacterImageComponent } from './character-image/character-image.component';
 
 @NgModule({
    declarations: [
@@ -19,7 +20,8 @@ import { MiddleBlockComponent } from './middle-block/middle-block.component';
       CharacterListComponent,
       CharacterDetailsComponent,
       CharacterListPaginationComponent,
-      MiddleBlockComponent
+      MiddleBlockComponent,
+      CharacterImageComponent
    ],
    imports: [
       BrowserModule,
