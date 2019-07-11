@@ -8,6 +8,8 @@ import { CharacterSearchComponent } from './character-search/character-search.co
 import { CharacterListComponent } from './character-list/character-list.component';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { CharacterListPaginationComponent } from './character-list-pagination/character-list-pagination.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MiddleBlockComponent } from './middle-block/middle-block.component';
 
 @NgModule({
    declarations: [
@@ -16,11 +18,13 @@ import { CharacterListPaginationComponent } from './character-list-pagination/ch
       CharacterSearchComponent,
       CharacterListComponent,
       CharacterDetailsComponent,
-      CharacterListPaginationComponent
+      CharacterListPaginationComponent,
+      MiddleBlockComponent
    ],
    imports: [
       BrowserModule,
-      AppRoutingModule
+      AppRoutingModule,
+      HttpClientModule
    ],
    providers: [],
    bootstrap: [

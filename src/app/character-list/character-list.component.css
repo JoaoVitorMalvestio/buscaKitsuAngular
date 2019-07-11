@@ -21,29 +21,21 @@ table tr:not(:first-child):hover {
 
 th {
     text-align: left;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    background: #D42026;
+    padding: 9px;
 }
 
 table th:first-child {
     width: 25%;
-    color: white;
     margin-right: 10px;
-    padding: 9px;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: left;
-    background: #D42026;
 }
 
 table th:last-child {
     width: 75%;
-    color: white;
-    padding: 9px;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: left;
-    background: #D42026;
 }
 
 table td:first-child{
