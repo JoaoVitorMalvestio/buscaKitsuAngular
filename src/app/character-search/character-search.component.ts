@@ -1,7 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
-import { CharacterService } from '../character.service';
 import { Character } from './../character';
 
 import {
@@ -20,7 +19,7 @@ export class CharacterSearchComponent implements OnInit {
   @Output()
   private searchTerm = new Subject<string>();
 
-  constructor(private characterService: CharacterService) { }
+  constructor() { }
 
   search(term: string): void {
     this.searchTerm.next(term);
