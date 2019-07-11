@@ -8,6 +8,7 @@
 body {
     margin: 0px;
     padding: 20px 42px 0px 42px;
+    border-bottom: 12px solid #D42026;
 }
 
 h1, h4 {

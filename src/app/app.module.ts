@@ -7,6 +7,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { CharacterSearchComponent } from './character-search/character-search.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
+import { CharacterListPaginationComponent } from './character-list-pagination/character-list-pagination.component';
 
 @NgModule({
    declarations: [
@@ -14,7 +15,8 @@ import { CharacterDetailsComponent } from './character-details/character-details
       TopBarComponent,
       CharacterSearchComponent,
       CharacterListComponent,
-      CharacterDetailsComponent
+      CharacterDetailsComponent,
+      CharacterListPaginationComponent
    ],
    imports: [
       BrowserModule,
