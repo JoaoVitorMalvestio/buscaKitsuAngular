@@ -1,2 +1,2 @@
-<app-character-search></app-character-search>
+<app-character-search (searchTerm)="refreshSearch($event)" ></app-character-search>
 <app-character-list [charactersList]='charactersList'></app-character-list>

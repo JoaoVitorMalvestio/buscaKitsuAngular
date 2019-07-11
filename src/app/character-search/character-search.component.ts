@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
 import { CharacterService } from '../character.service';
@@ -7,6 +7,7 @@ import { Character } from './../character';
 import {
    debounceTime, distinctUntilChanged, switchMap
  } from 'rxjs/operators';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-character-search',
@@ -15,12 +16,14 @@ import {
 })
 export class CharacterSearchComponent implements OnInit {
   characters$: Observable<Character[]>;
-  private searchTerms = new Subject<string>();
+
+  @Output()
+  private searchTerm = new Subject<string>();
 
   constructor(private characterService: CharacterService) { }
 
   search(term: string): void {
-    this.searchTerms.next(term);
+    this.searchTerm.next(term);
   }
 
   ngOnInit(): void {
