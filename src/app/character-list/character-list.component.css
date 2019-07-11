@@ -53,3 +53,19 @@ table td:last-child{
     text-align: left;
 }
 
+table td {
+    display: flex;
+}
+
+table td img {
+    margin-top: 27px;
+    margin-right: 25px;
+    border-radius: 100%;
+    width: 58px !important;
+    height: 58px !important;
+}
+
+table td p {
+    margin-top: 45.5px;
+}
+

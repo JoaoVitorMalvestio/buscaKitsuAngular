@@ -1,8 +1,11 @@
 <table>
   <tr><th>Personagem</th><th>Descrição</th></tr>
   <tr *ngFor="let character of charactersList">
-    <td>{{character.name}}</td>
-    <td>{{character.description}}</td>
+    <td>
+      <img src='{{character.attributes.image.original}}'>
+      <p>{{character.attributes.name}}</p>
+    </td>
+    <td>{{character.attributes.description}}</td>
   </tr>
 </table>
 <app-character-list-pagination></app-character-list-pagination>
