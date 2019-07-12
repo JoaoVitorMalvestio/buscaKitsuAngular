@@ -1,8 +1,30 @@
-div {
+.container {
     width: 100%;
     text-align: center;
     padding: 16px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+}
+
+.container div:first-child, .container div:last-child {
+    padding-top: 8px;
+}
+
+.container div:first-child a {
+    display: block;
+    border-right: 12px solid #D42026;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+.container div:last-child a {
+    display: block;
+    border-left: 12px solid #D42026;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    cursor: pointer;
+    margin-left: 2px;
 }

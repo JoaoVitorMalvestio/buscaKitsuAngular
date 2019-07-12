@@ -1,0 +1,16 @@
+div {
+    background: white;
+    font-size: 21px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #D42026;
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: center;
+    margin: 0px 10px 0px 10px;
+}
+
+a {
+    margin: 3px;
+    color: #D42026;
+}

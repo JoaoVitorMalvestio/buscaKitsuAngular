@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Character } from '../character';
 
 @Component({
   selector: 'app-character-list-pagination',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character-list-pagination.component.css']
 })
 export class CharacterListPaginationComponent implements OnInit {
+  @Input() charactersList: Character[];
 
   constructor() { }
 

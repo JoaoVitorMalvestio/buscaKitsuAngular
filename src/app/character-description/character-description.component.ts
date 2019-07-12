@@ -14,4 +14,9 @@ export class CharacterDescriptionComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  tiraTagBr(texto){
+    // Tira a tag <br> do texto
+    return texto = texto.replace(/<br>/g, ' ');
+  }
 }

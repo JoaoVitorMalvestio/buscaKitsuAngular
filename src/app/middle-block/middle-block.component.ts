@@ -1,3 +1,4 @@
+import { CharactersResponse } from './../charactersResponse';
 import { CharacterService } from './../character.service';
 import { Component, OnInit } from '@angular/core';
 import { Character } from '../character';
@@ -15,8 +16,8 @@ export class MiddleBlockComponent implements OnInit {
   }
 
   refreshSearch(newSearchTerm: string) {
-    this.characterService.getCharacters(newSearchTerm).subscribe((characterList: Character[]) => {
-      this.charactersList = characterList;
+    this.characterService.getCharacters(newSearchTerm).subscribe((characterList: CharactersResponse) => {
+      this.charactersList = characterList.data;
     });
   }
 
