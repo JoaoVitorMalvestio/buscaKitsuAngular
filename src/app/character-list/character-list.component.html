@@ -5,7 +5,9 @@
       <app-character-image [character]='character'></app-character-image>      
       <p>{{character.attributes.name}}</p>
     </td>
-    <td>{{character.attributes.description | slice: 0: 250 }}</td>
+    <td>
+      <app-character-description [character]='character'></app-character-description>            
+    </td>
   </tr>
 </table>
 <app-character-list-pagination></app-character-list-pagination>
