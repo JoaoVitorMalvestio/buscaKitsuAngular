@@ -1,5 +1,6 @@
 import { Character } from './../character';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Pagination } from '../pagination';
 
 @Component({
   selector: 'app-character-list',
@@ -8,11 +9,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CharacterListComponent implements OnInit {
   @Input() charactersList: Character[];
+  @Input() pagination: Pagination;
+
+  /*@Output()
+  public pageChange = new EventEmitter<number>();*/
 
   constructor() { }
 
   ngOnInit() {
-
+    // this.pageChange.emit(123);
   }
 
 }

@@ -10,7 +10,12 @@ div {
     margin: 0px 10px 0px 10px;
 }
 
-a {
+div a {
     margin: 3px;
     color: #D42026;
+    display: block;
+}
+
+:host {
+    display: flex;
 }

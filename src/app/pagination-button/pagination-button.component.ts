@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Button } from './../button';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pagination-button',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagination-button.component.css']
 })
 export class PaginationButtonComponent implements OnInit {
+  @Input() buttons: Button[];
 
   constructor() { }
 

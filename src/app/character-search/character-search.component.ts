@@ -1,40 +1,40 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
+import { Observable, Subject, Subscription } from 'rxjs';
 
 import { Character } from './../character';
 
 import {
    debounceTime, distinctUntilChanged, switchMap
  } from 'rxjs/operators';
-import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-character-search',
   templateUrl: './character-search.component.html',
   styleUrls: ['./character-search.component.css']
 })
-export class CharacterSearchComponent implements OnInit {
+export class CharacterSearchComponent implements OnInit, OnDestroy {
   characters$: Observable<Character[]>;
 
   @Output()
   private searchTerm = new Subject<string>();
+  private searchEmitter = new EventEmitter<string>();
+  private searchSubscription: Subscription;
 
-  constructor() { }
+  constructor() {
+    this.searchSubscription = this.searchEmitter.pipe(
+      debounceTime(300),
+      distinctUntilChanged(),
+    ).subscribe(term => this.searchTerm.next(term));
+  }
 
   search(term: string): void {
-    this.searchTerm.next(term);
+    this.searchEmitter.emit(term);
   }
 
   ngOnInit(): void {
-    /*this.characters$ = this.searchTerms.pipe(
-      // wait 300ms after each keystroke before considering the term
-      debounceTime(300),
+  }
 
-      // ignore new term if same as previous term
-      distinctUntilChanged(),
-
-      // switch to new search observable each time the term changes
-      switchMap((term: string) => this.characterService.getCharacters()),
-    );*/
+  ngOnDestroy() {
+    this.searchSubscription.unsubscribe();
   }
 }
