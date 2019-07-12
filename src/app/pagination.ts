@@ -1,6 +1,6 @@
 export class Pagination {
     total: number;
-    atual: number;
+    current: number;
     nextLink: string;
     prevLink: string;
 }

@@ -21,6 +21,7 @@ export class MiddleBlockComponent implements OnInit {
     this.characterService.getCharacters(newSearchTerm).subscribe((charactersResponse: CharactersResponse) => {
       this.charactersList = charactersResponse.data;
       this.pagination.total = charactersResponse.meta.count;
+      this.pagination.current = 0;
       this.pagination.prevLink = charactersResponse.links.prev;
       this.pagination.nextLink = charactersResponse.links.next;
     });

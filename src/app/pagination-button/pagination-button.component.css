@@ -19,3 +19,11 @@ div a {
 :host {
     display: flex;
 }
+
+div.selected {
+    background: #D42026;
+}
+
+a.selected {    
+    color: white !important;
+}
