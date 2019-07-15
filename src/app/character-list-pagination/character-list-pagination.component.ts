@@ -29,8 +29,6 @@ export class CharacterListPaginationComponent implements OnInit {
   private buttonsInit() {
     this.buttons = [];
 
-    console.log(this.pagination.current + ' - ' + this.getInitialOffset() + ' - ' + this.getFinalOffset());
-
     for (let j = this.getInitialOffset(); j < this.getFinalOffset(); j += 10) {
       const button = new Button();
 
