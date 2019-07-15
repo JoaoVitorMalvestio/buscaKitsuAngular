@@ -20,7 +20,11 @@ export class CharacterListComponent implements OnInit {
     // this.pageChange.emit(123);
   }
 
-  onPageChange(page: number) {    
+  /*abreMedias(){
+
+  }*/
+
+  onPageChange(page: number) {
     this.changePage.emit(page);
   }
 

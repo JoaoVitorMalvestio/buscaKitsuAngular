@@ -1,6 +1,6 @@
 <table>
   <tr><th>Personagem</th><th>Descrição</th></tr>
-  <tr *ngFor="let character of charactersList">
+  <tr (click)='abreMedias()' *ngFor="let character of charactersList">
     <td>
       <app-character-image [character]='character'></app-character-image>      
       <p>{{character.attributes.name}}</p>

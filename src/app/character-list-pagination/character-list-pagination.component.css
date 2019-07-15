@@ -34,3 +34,17 @@
     cursor: auto
 }
 
+@media only screen and (max-width: 700px){
+    .container{
+        width: auto;
+        padding: 18px 30px 24px 30px;
+    }
+
+    .container div:first-child a {
+        margin-right: 50px;
+    }
+
+    .container div:last-child a {
+        margin-left: 50px;
+    }
+}
