@@ -11,13 +11,17 @@ export class CharacterListComponent implements OnInit {
   @Input() charactersList: Character[];
   @Input() pagination: Pagination;
 
-  /*@Output()
-  public pageChange = new EventEmitter<number>();*/
+  @Output()
+  public changePage = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit() {
     // this.pageChange.emit(123);
+  }
+
+  onPageChange(page: number) {    
+    this.changePage.emit(page);
   }
 
 }

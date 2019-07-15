@@ -28,3 +28,9 @@
     cursor: pointer;
     margin-left: 2px;
 }
+
+.container div a.disabled {
+    opacity: 0.35;
+    cursor: auto
+}
+

@@ -1,4 +1,4 @@
-<div *ngFor="let button of buttons" class='{{ button.selected? "selected": "" }}'>  
+<div (click)="onPageChange(button.offset,$event)" *ngFor="let button of buttons" class='{{ button.selected? "selected": "" }}'>  
     <a class='{{ button.selected? "selected": "" }}'>{{button.number}}</a>
 </div>
 

@@ -1,9 +1,9 @@
 <div class='container'>
   <div>
-    <a></a>
+    <a (click)='onPageChange(this.getPagePrev())' class='{{this.getPagePrev()==this.pagination.current?"disabled":""}}'></a>
   </div>
-  <app-pagination-button [buttons]='buttons'></app-pagination-button>
+  <app-pagination-button [buttons]='buttons' (changePage)='onPageChange($event)'></app-pagination-button>
   <div>
-    <a></a>
+    <a (click)='onPageChange(this.getPageNext())' class='{{this.getPageNext()==this.pagination.current?"disabled":""}}'></a>
   </div>
 </div>

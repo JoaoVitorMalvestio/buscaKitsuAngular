@@ -10,4 +10,4 @@
     </td>
   </tr>
 </table>
-<app-character-list-pagination [characterList]='charactersList' [pagination]='pagination'></app-character-list-pagination>
+<app-character-list-pagination [characterList]='charactersList' [pagination]='pagination' (changePage)="onPageChange($event)"></app-character-list-pagination>

@@ -1,2 +1,2 @@
 <app-character-search (searchTerm)="refreshSearch($event)" ></app-character-search>
-<app-character-list [charactersList]='charactersList' [pagination]='pagination'></app-character-list>
+<app-character-list [charactersList]='charactersList' [pagination]='pagination' (changePage)="changePage($event)"></app-character-list>

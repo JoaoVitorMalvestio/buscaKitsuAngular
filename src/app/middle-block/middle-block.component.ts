@@ -13,18 +13,24 @@ export class MiddleBlockComponent implements OnInit {
 
   public charactersList: Character[] = [];
   public pagination: Pagination = new Pagination();
+  private searchTerm = '';
 
   constructor(private characterService: CharacterService) {
   }
 
-  refreshSearch(newSearchTerm: string) {
-    this.characterService.getCharacters(newSearchTerm).subscribe((charactersResponse: CharactersResponse) => {
+  refreshSearch(newSearchTerm: string, offset: number = 0) {
+    this.characterService.getCharacters(newSearchTerm, offset).subscribe((charactersResponse: CharactersResponse) => {
+      this.searchTerm = newSearchTerm;
       this.charactersList = charactersResponse.data;
       this.pagination.total = charactersResponse.meta.count;
-      this.pagination.current = 0;
+      this.pagination.current = offset;
       this.pagination.prevLink = charactersResponse.links.prev;
       this.pagination.nextLink = charactersResponse.links.next;
     });
+  }
+
+  changePage(pageNumber: number) {
+    this.refreshSearch(this.searchTerm, pageNumber);
   }
 
   ngOnInit() {

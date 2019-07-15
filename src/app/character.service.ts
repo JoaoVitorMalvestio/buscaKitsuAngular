@@ -14,17 +14,19 @@ export class CharacterService {
 
   constructor( private httpClient: HttpClient ) {}
 
-  getCharacters(term: string) {
-    const filtro = term != ''?('?filter[name]=' + term): '';
+  getCharacters(term: string, offset: number) {
+    // tslint:disable-next-line: triple-equals
+    const filtro = term != '' ? ('?filter[name]=' + term + '&') : '?';
 
-    return this.httpClient.get(this.baseUrl + '/characters' + filtro).pipe(map((response: CharactersResponse) => {
-      return (response); /*.map((character) => {
-        return {
-          id: character.id,
-          description: character.attributes.description,
-          name: character.attributes.name
-        };
-      });*/
+    return this.httpClient.get(this.baseUrl + '/characters' + filtro + 'page[offset]=' + offset)
+    .pipe(map((response: CharactersResponse) => {
+      return (response);
+    }));
+  }
+
+  getCharactersUsingLink(link: string) {
+    return this.httpClient.get(link).pipe(map((response: CharactersResponse) => {
+      return (response);
     }));
   }
 }
