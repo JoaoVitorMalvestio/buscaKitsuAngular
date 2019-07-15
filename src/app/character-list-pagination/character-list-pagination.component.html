@@ -4,6 +4,6 @@
   </div>
   <app-pagination-button [buttons]='buttons' (changePage)='onPageChange($event)'></app-pagination-button>
   <div>
-    <a (click)='onPageChange(this.getPageNext())' class='{{this.getPageNext()==this.pagination.current?"disabled":""}}'></a>
+    <a (click)='onPageChange(this.getPageNext())' class='{{(this.pagination.current!=0&&this.getPageNext()==this.pagination.current)?"disabled":""}}'></a>
   </div>
 </div>

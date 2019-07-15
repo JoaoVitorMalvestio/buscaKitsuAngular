@@ -29,6 +29,8 @@ export class CharacterListPaginationComponent implements OnInit {
   private buttonsInit() {
     this.buttons = [];
 
+    console.log(this.pagination.current + ' - ' + this.getInitialOffset() + ' - ' + this.getFinalOffset());
+
     for (let j = this.getInitialOffset(); j < this.getFinalOffset(); j += 10) {
       const button = new Button();
 
@@ -36,6 +38,7 @@ export class CharacterListPaginationComponent implements OnInit {
       button.offset = j;
       // tslint:disable-next-line: triple-equals
       button.selected = (this.pagination.current == j);
+      button.hiddenMobile = this.isHiddenMobile(j);
 
       this.buttons.push(button);
     }
@@ -43,15 +46,23 @@ export class CharacterListPaginationComponent implements OnInit {
 
   private getInitialOffset() {
     if (this.pagination.current >= 0  &&
-        this.pagination.current < 30) { return 0; }
+        this.pagination.current <= 20) { return 0; }
 
-    if (this.pagination.current >= (this.pagination.total - 30)) { return this.pagination.total - 50; }
+    if (this.pagination.current >= (this.pagination.total - 30)) {
+      if (this.pagination.current >= (this.pagination.total - 10)) { return this.pagination.current - 50; }
+      if (this.pagination.current >= (this.pagination.total - 20)) { return this.pagination.current - 40; }
+      if (this.pagination.current >= (this.pagination.total - 30)) { return this.pagination.current - 30; }
+    }
 
     return this.pagination.current - 20;
   }
 
   private getFinalOffset() {
-    if (this.pagination.current < 30) { return 60; }
+    if (this.pagination.current <= 20) {
+      if (this.pagination.total > 60) { return 60; }
+      if (this.pagination.total > 50) { return 50; }
+      if (this.pagination.total > 40) { return 40; }
+    }
 
     if (this.pagination.current >= (this.pagination.total - 30)) { return this.pagination.total; }
 
@@ -67,11 +78,24 @@ export class CharacterListPaginationComponent implements OnInit {
   }
 
   public getPageNext() {
-    const prev = this.pagination.current + 10;
+    const next = this.pagination.current + 10;
 
-    if (prev > this.pagination.total - 10) { return this.pagination.current; }
+    if (next >= this.pagination.total) { return this.pagination.current; }
 
-    return prev;
+    return next;
+  }
+
+  private isHiddenMobile(offset: number) {
+    // tslint:disable-next-line: triple-equals
+    if (offset == this.pagination.current) { return false; }
+    // tslint:disable-next-line: triple-equals
+    if (this.pagination.current == 0) { return offset >= 30; }
+
+    if (this.pagination.current > (this.pagination.total - 10)) { return offset < this.pagination.current - 20 ; }
+    // tslint:disable-next-line: triple-equals
+    if (offset == (this.pagination.current - 10) || (offset == this.pagination.current + 10)) { return false; }
+
+    return true;
   }
 
   onPageChange(page: number) {

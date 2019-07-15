@@ -24,8 +24,6 @@ export class MiddleBlockComponent implements OnInit {
       this.charactersList = charactersResponse.data;
       this.pagination.total = charactersResponse.meta.count;
       this.pagination.current = offset;
-      this.pagination.prevLink = charactersResponse.links.prev;
-      this.pagination.nextLink = charactersResponse.links.next;
     });
   }
 
