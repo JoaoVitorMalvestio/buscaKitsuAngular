@@ -11,6 +11,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 })
 export class CharacterListMediasComponent implements OnInit {
   public medias: Media[] = [];
+  public buscando = false;
 
   constructor(
     private mediaService: MediaService,
@@ -22,8 +23,11 @@ export class CharacterListMediasComponent implements OnInit {
   }
 
   getMediasOfCharacter() {
+    this.buscando = true;
+
     this.mediaService.getMediasOfCharacter(this.data.character).subscribe(medias => {
       this.medias = medias;
+      this.buscando = false;
     });
   }
 

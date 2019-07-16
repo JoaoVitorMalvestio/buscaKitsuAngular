@@ -15,17 +15,22 @@ export class MiddleBlockComponent implements OnInit {
   public charactersList: Character[] = [];
   public pagination: Pagination = new Pagination();
   private searchTerm = '';
+  public buscando = false;
 
   constructor(private characterService: CharacterService) {
   }
 
   refreshSearch(newSearchTerm: string, offset: number = 0) {
+    this.buscando = true; // SpinnerLoader
+
     this.characterService.getCharacters(newSearchTerm, offset).subscribe((charactersResponse: CharactersResponse) => {
       this.searchTerm = newSearchTerm;
       this.charactersList = charactersResponse.data;
       this.pagination = new Pagination();
       this.pagination.total = charactersResponse.meta.count;
       this.pagination.current = offset;
+
+      this.buscando = false; // SpinnerLoader
     });
   }
 

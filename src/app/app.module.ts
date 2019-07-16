@@ -15,6 +15,8 @@ import { PaginationButtonComponent } from './components/shared/pagination/pagina
 import { CharacterListMediasComponent } from './components/media/character-list-medias/character-list-medias.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoaderSpinnerComponent } from './components/shared/loader-spinner/loader-spinner.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
    declarations: [
@@ -27,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       CharacterImageComponent,
       CharacterDescriptionComponent,
       PaginationButtonComponent,
-      CharacterListMediasComponent
+      CharacterListMediasComponent,
+      LoaderSpinnerComponent
    ],
    entryComponents: [
       CharacterListMediasComponent
@@ -37,7 +40,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       AppRoutingModule,
       HttpClientModule,
       MatDialogModule,
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+      MatProgressSpinnerModule
    ],
    providers: [],
    bootstrap: [
