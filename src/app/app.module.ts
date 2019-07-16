@@ -13,6 +13,9 @@ import { MiddleBlockComponent } from './middle-block/middle-block.component';
 import { CharacterImageComponent } from './character-image/character-image.component';
 import { CharacterDescriptionComponent } from './character-description/character-description.component';
 import { PaginationButtonComponent } from './pagination-button/pagination-button.component';
+import { CharacterListMediasComponent } from './character-list-medias/character-list-medias.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
    declarations: [
@@ -25,12 +28,18 @@ import { PaginationButtonComponent } from './pagination-button/pagination-button
       MiddleBlockComponent,
       CharacterImageComponent,
       CharacterDescriptionComponent,
-      PaginationButtonComponent
+      PaginationButtonComponent,
+      CharacterListMediasComponent
+   ],
+   entryComponents: [
+      CharacterListMediasComponent
    ],
    imports: [
       BrowserModule,
       AppRoutingModule,
-      HttpClientModule
+      HttpClientModule,
+      MatDialogModule,
+      BrowserAnimationsModule
    ],
    providers: [],
    bootstrap: [
