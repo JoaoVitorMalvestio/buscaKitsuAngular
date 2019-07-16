@@ -17,7 +17,7 @@ export class MediaService {
 
   constructor( private httpClient: HttpClient, private mediaCharactersService: MediaCharactersService ) {}
 
-  getMediasOfCharacter(character: Character): Observable<MediaResponse[]> {
+  getMediasOfCharacter(character: Character): Observable<Media[]> {
     return this.mediaCharactersService.getMediaCharactersByCharacter(character)
     .pipe(map((mediaCharactersResponse: MediaCharactersResponse) => mediaCharactersResponse.data),
     switchMap((mediaCharactersList: MediaCharacters[]) => {
@@ -27,9 +27,9 @@ export class MediaService {
     );
   }
 
-  getMediaByMediaCharacters(mediaCharacters: MediaCharacters): Observable<MediaResponse> {
+  getMediaByMediaCharacters(mediaCharacters: MediaCharacters): Observable<Media> {
     return this.httpClient.get(mediaCharacters.relationships.media.links.related).pipe(map((response: MediaResponse) => {
-      return (response);
+      return (response.data);
     }));
   }
 }

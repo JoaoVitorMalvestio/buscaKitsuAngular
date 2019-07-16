@@ -2,7 +2,15 @@
 <div mat-dialog-content>
   <table>
     <tr><th>Tipo</th><th>Nome</th></tr>
-
+    <tr *ngFor="let media of medias">
+      <td>
+        <p>{{media.type}}</p>
+      </td>
+      <td>
+        <img src="{{media.attributes.posterImage.original}}">
+        <p>{{media.attributes.canonicalTitle}}</p>
+      </td>              
+    </tr>
   </table>
 </div>
 <div mat-dialog-actions>
