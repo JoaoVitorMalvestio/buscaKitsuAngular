@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Character } from './character';
-import { MediaCharactersResponse } from './mediaCharactersResponse';
+import { Character } from '../../components/character/character';
+import { MediaCharactersResponse } from '../../components/media/mediaCharactersResponse';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 

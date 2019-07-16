@@ -1,8 +1,9 @@
-import { CharactersResponse } from './../charactersResponse';
-import { CharacterService } from './../character.service';
+import { CharactersResponse } from '../../character/charactersResponse';
+import { CharacterService } from '../../../services/character/character.service';
 import { Component, OnInit } from '@angular/core';
-import { Character } from '../character';
-import { Pagination } from '../pagination';
+import { Character } from '../../character/character';
+import { Pagination } from '../../shared/pagination/pagination';
+
 
 @Component({
   selector: 'app-middle-block',
@@ -22,6 +23,7 @@ export class MiddleBlockComponent implements OnInit {
     this.characterService.getCharacters(newSearchTerm, offset).subscribe((charactersResponse: CharactersResponse) => {
       this.searchTerm = newSearchTerm;
       this.charactersList = charactersResponse.data;
+      this.pagination = new Pagination();
       this.pagination.total = charactersResponse.meta.count;
       this.pagination.current = offset;
     });

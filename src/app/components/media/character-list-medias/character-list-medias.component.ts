@@ -1,8 +1,8 @@
-import { MediaService } from './../media.service';
+import { Media } from '../media';
+import { MediaService } from '../../../services/media/media.service';
+import { Icharacter } from '../../character/icharacter';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Component, OnInit, Inject } from '@angular/core';
-import { Icharacter } from '../icharacter';
-import { Media } from '../media';
 
 @Component({
   selector: 'app-character-list-medias',

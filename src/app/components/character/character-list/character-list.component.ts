@@ -1,7 +1,7 @@
-import { CharacterListMediasComponent } from './../character-list-medias/character-list-medias.component';
-import { Character } from './../character';
+import { CharacterListMediasComponent } from '../../media/character-list-medias/character-list-medias.component';
+import { Character } from '../character';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Pagination } from '../pagination';
+import { Pagination } from '../../shared/pagination/pagination';
 import {MatDialog} from '@angular/material/dialog';
 
 @Component({

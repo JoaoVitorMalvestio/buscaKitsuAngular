@@ -1,4 +1,4 @@
-import { Button } from './../button';
+import { Button } from '../button';
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
