@@ -28,9 +28,9 @@ export class CharacterListComponent implements OnInit {
       data: {character: characterModal}
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+    /*dialogRef.afterClosed().subscribe(result => {
+
+    });*/
   }
 
   onPageChange(page: number) {
