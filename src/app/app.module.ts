@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { CharacterSearchComponent } from './character-search/character-search.component';
 import { CharacterListComponent } from './character-list/character-list.component';
-import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { CharacterListPaginationComponent } from './character-list-pagination/character-list-pagination.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MiddleBlockComponent } from './middle-block/middle-block.component';
@@ -23,7 +22,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       TopBarComponent,
       CharacterSearchComponent,
       CharacterListComponent,
-      CharacterDetailsComponent,
       CharacterListPaginationComponent,
       MiddleBlockComponent,
       CharacterImageComponent,

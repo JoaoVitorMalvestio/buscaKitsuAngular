@@ -47,6 +47,7 @@ table tr th:last-child, table tr td:last-child {
 
 table tr td {
     padding: 16px;
+    padding-left: 10px;
     padding-right: 0px;
 }
 

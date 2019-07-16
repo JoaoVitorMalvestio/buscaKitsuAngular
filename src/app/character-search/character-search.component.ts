@@ -4,7 +4,7 @@ import { Observable, Subject, Subscription } from 'rxjs';
 import { Character } from './../character';
 
 import {
-   debounceTime, distinctUntilChanged, switchMap
+   debounceTime, distinctUntilChanged
  } from 'rxjs/operators';
 
 @Component({

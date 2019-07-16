@@ -15,7 +15,7 @@ export class CharacterDescriptionComponent implements OnInit {
   }
 
 
-  tiraTagBr(texto){
+  tiraTagBr(texto: string){
     // Tira a tag <br> do texto
     return texto = texto.replace(/<br>/g, ' ');
   }
