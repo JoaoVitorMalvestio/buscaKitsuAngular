@@ -1,16 +1,25 @@
+* {
+    font-size: 16px;    
+}
+
 h1 {
     margin: 0px;
     color: #D42026;
+    font-size: 21px; 
 }
 
 table {
     width: 100%;
+    border-spacing: 0px;
 }
 
 table tr {
     width: 100%;    
     display: flex;
     vertical-align: middle;
+}
+
+table tr:not(:first-child) {
     border-bottom: 1px solid #D42026;
 }
 
@@ -26,31 +35,57 @@ table tr th {
 }
 
 table tr th:first-child, table tr td:first-child {
-    width: 25%;
+    width: 15%;
     margin-right: 10px;
     display: flex;
 }
 
 table tr th:last-child, table tr td:last-child {
-    width: 75%;
+    width: 85%;
     display: flex;
+}
+
+table tr td {
+    padding: 16px;
+    padding-right: 0px;
 }
 
 table tr td:first-child {
     text-transform: capitalize;
-    padding-left: 9px;
     font-size: 16px;
-    height: 112px;
 }
 
-table tr td:last-child {
-    
+table tr td p {
+    margin: 0px;
+    margin-top: 20px;
 }
 
 table tr td:last-child img {
-    margin-top: 27px;
-    margin-right: 25px;
     border-radius: 100%;
     width: 58px;
-    height: 58px;    
+    height: 58px;
+    margin-right: 16px;    
+}
+
+:host div:last-child {
+    justify-content: center;
+}
+
+@media only screen and (max-width: 767px){
+    * {
+        font-size: 12px;
+    }
+
+    table tr th:first-child, table tr td:first-child {        
+        display: none;
+    }
+    
+    table tr th:last-child, table tr td:last-child {
+        width: 100%;
+        display: flex;
+    }    
+
+    table tr td p {
+        margin-top: 0px;
+    }
 }

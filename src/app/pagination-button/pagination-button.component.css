@@ -28,7 +28,7 @@ a.selected {
     color: white !important;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 767px){
     .hiddenButton {
         display: none;
     }

@@ -10,7 +10,7 @@ import { Media } from '../media';
   templateUrl: './character-list-medias.component.html',
   styleUrls: ['./character-list-medias.component.css']
 })
-export class CharacterListMediasComponent implements OnInit {  
+export class CharacterListMediasComponent implements OnInit {
   public medias: Media[] = [];
 
   constructor(
