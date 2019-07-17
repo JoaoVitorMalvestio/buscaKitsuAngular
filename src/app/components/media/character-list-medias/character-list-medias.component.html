@@ -1,8 +1,8 @@
 <app-loader-spinner [buscando]='buscando'></app-loader-spinner>
-<h1 mat-dialog-title>Lista de Medias</h1>
+<h1 mat-dialog-title i18n>Lista de Medias</h1>
 <div mat-dialog-content>
   <table>
-    <tr><th>Tipo</th><th>Nome</th></tr>
+    <tr><th i18n>Tipo</th><th i18n>Nome</th></tr>
     <tr *ngFor="let media of medias">
       <td>
         <p>{{media.type}}</p>
@@ -15,5 +15,5 @@
   </table>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="closeModal()">Fechar</button>  
+  <button mat-button (click)="closeModal()" i18n>Fechar</button>  
 </div>

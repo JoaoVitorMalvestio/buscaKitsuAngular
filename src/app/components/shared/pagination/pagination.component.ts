@@ -11,7 +11,7 @@ export class PaginationComponent implements OnInit {
   public current: number;
   public total: number;
   private internalPagination: Pagination;
-  private buttons: Button[];
+  public buttons: Button[];
 
   get pagination() {
     return this.internalPagination;

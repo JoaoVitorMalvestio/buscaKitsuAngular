@@ -52,6 +52,13 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "en": {      
+              "aot": true,      
+              "i18nFile": "translate/messages.en.xlf",      
+              "i18nFormat": "xlf",      
+              "i18nLocale": "en",      
+              "i18nMissingTranslation": "error"    
             }
           }
         },
@@ -63,7 +70,8 @@
           "configurations": {
             "production": {
               "browserTarget": "buscaKitsuAngular:build:production"
-            }
+            },
+            "en": {      "browserTarget": "buscaKitsuAngular:build:en"    }
           }
         },
         "extract-i18n": {
