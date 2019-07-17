@@ -98,6 +98,16 @@ export class PaginationComponent implements OnInit {
     return true;
   }
 
+  public isFirstPage() {
+    // tslint:disable-next-line: triple-equals
+    return this.current == 0;
+  }
+
+  public isLastPage() {
+    // tslint:disable-next-line: triple-equals
+    return this.current == 0 ? (this.total <= 10) : (this.getPageNext() == this.current);
+  }
+
   onPageChange(page: number) {
     this.changePage.emit(page);
   }
