@@ -108,6 +108,18 @@ export class PaginationComponent implements OnInit {
     return this.current == 0 ? (this.total <= 10) : (this.getPageNext() == this.current);
   }
 
+  onClickArrowPrev(page: number) {
+    if (this.isFirstPage()) { return; }
+
+    this.onPageChange(page);
+  }
+
+  onClickArrowNext(page: number) {
+    if (this.isLastPage()) { return; }
+
+    this.onPageChange(page);
+  }
+
   onPageChange(page: number) {
     this.changePage.emit(page);
   }

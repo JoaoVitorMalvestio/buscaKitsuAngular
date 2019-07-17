@@ -1,9 +1,9 @@
 <div class='container'>
   <div>
-    <a (click)='onPageChange(this.getPagePrev())' class='{{this.isFirstPage()?"disabled":""}}'></a>
+    <a (click)='onClickArrowPrev(this.getPagePrev())' class='{{this.isFirstPage()?"disabled":""}}'></a>
   </div>
   <app-pagination-button [buttons]='buttons' (changePage)='onPageChange($event)'></app-pagination-button>
   <div>
-    <a (click)='onPageChange(this.getPageNext())' class='{{this.isLastPage()?"disabled":""}}'></a>
+    <a (click)='onClickArrowNext(this.getPageNext())' class='{{this.isLastPage()?"disabled":""}}'></a>
   </div>
 </div>
