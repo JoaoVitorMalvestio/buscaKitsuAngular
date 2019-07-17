@@ -16,13 +16,6 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="13e2c1b7a357f6ea1e979dfbca4b95c54e2ff806" datatype="html">
-        <source>JOÃO VITOR MALVESTIO DA SILVA</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/structural/top-bar/top-bar.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="a832c95deb3352dabafd2f1ba0e18e07cc9a63e7" datatype="html">
         <source>Nome do Personagem</source>
         <context-group purpose="location">
