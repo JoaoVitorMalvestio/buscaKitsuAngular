@@ -53,13 +53,28 @@
                 }
               ]
             },
+            "pt": {      
+              "aot": true,      
+              "i18nFile": "translate/messages.pt.xlf",      
+              "i18nFormat": "xlf",      
+              "i18nLocale": "pt",      
+              "i18nMissingTranslation": "error"    
+            },
             "en": {      
               "aot": true,      
               "i18nFile": "translate/messages.en.xlf",      
               "i18nFormat": "xlf",      
               "i18nLocale": "en",      
               "i18nMissingTranslation": "error"    
+            },
+            "es": {      
+              "aot": true,      
+              "i18nFile": "translate/messages.es.xlf",      
+              "i18nFormat": "xlf",      
+              "i18nLocale": "es",      
+              "i18nMissingTranslation": "error"    
             }
+
           }
         },
         "serve": {
@@ -71,7 +86,15 @@
             "production": {
               "browserTarget": "buscaKitsuAngular:build:production"
             },
-            "en": {      "browserTarget": "buscaKitsuAngular:build:en"    }
+            "pt": {
+              "browserTarget": "buscaKitsuAngular:build:pt"    
+            },
+            "en": {
+              "browserTarget": "buscaKitsuAngular:build:en"    
+            },
+            "es": {
+              "browserTarget": "buscaKitsuAngular:build:es"    
+            }
           }
         },
         "extract-i18n": {
