@@ -17,6 +17,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderSpinnerComponent } from './components/shared/loader-spinner/loader-spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
    declarations: [
@@ -41,7 +42,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
       HttpClientModule,
       MatDialogModule,
       BrowserAnimationsModule,
-      MatProgressSpinnerModule
+      MatProgressSpinnerModule,
+      MatButtonModule
    ],
    providers: [],
    bootstrap: [
