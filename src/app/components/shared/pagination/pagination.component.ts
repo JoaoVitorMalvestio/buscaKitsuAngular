@@ -121,6 +121,8 @@ export class PaginationComponent implements OnInit {
   }
 
   onPageChange(page: number) {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     this.changePage.emit(page);
   }
 
