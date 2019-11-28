@@ -1,0 +1,24 @@
+* {
+    cursor: pointer;
+}
+
+div {
+    top: 90%;
+    left: 93%;
+    position: fixed;
+}
+
+div div {
+    height: 45px;
+    width: 45px;
+    background: #D42026;
+    border-radius: 50%;
+}
+
+div div a {
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 32%;
+    left: 41%;
+}

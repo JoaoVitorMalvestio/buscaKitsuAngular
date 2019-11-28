@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderSpinnerComponent } from './components/shared/loader-spinner/loader-spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
+import { ScrollToTopComponent } from './components/shared/scroll-to-top/scroll-to-top.component';
 
 @NgModule({
    declarations: [
@@ -31,7 +32,8 @@ import { MatButtonModule } from '@angular/material/button';
       CharacterDescriptionComponent,
       PaginationButtonComponent,
       CharacterListMediasComponent,
-      LoaderSpinnerComponent
+      LoaderSpinnerComponent,
+      ScrollToTopComponent
    ],
    entryComponents: [
       CharacterListMediasComponent

@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
 import { Character } from '../../character/character';
 import { Pagination } from '../../shared/pagination/pagination';
 
-
 @Component({
   selector: 'app-middle-block',
   templateUrl: './middle-block.component.html',

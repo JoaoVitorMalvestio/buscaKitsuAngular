@@ -1,3 +1,4 @@
 <app-loader-spinner [buscando]='buscando'></app-loader-spinner>
+<app-scroll-to-top></app-scroll-to-top>
 <app-character-search (searchTerm)="refreshSearch($event)" ></app-character-search>
 <app-character-list [charactersList]='charactersList' [pagination]='pagination' (changePage)="changePage($event)"></app-character-list>
